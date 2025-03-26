@@ -13,7 +13,7 @@ useEffect(() => {
           const data = await response.json();
           setProducts(data);
         } else {
-          throw new Error( 'Hе удалось загрузить пользователей' ); 
+          throw new Error( 'Hе удалось загрузить продукты' ); 
         }
       } catch (error) {
         if (error instanceof Error) {

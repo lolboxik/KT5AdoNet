@@ -12,7 +12,7 @@ export default function CategoriesView(){
             const data = await response.json();
             setCategories(data);
             } else {
-            throw new Error( 'Hе удалось загрузить пользователей' ); 
+            throw new Error( 'Hе удалось загрузить категории' ); 
             }
         } catch (error) {
             if (error instanceof Error) {
