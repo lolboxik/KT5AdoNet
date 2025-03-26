@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 
 
-export default function UsersView(){
-const [users, setUsers] = useState([]);
+export default function ProductsView(){
+const [products, setProducts] = useState([]);
 
 useEffect(() => {
     
-    const fetchUsers = async () => {
+    const fetchProducts = async () => {
       try {
-        const response = await fetch('/api/users');
+        const response = await fetch('/api/products');
         if (response.ok) {
           const data = await response.json();
-          setUsers(data);
+          setProducts(data);
         } else {
           throw new Error( 'Hе удалось загрузить пользователей' ); 
         }
@@ -24,14 +24,14 @@ useEffect(() => {
       }
     };
     
-    fetchUsers()
+    fetchProducts()
     },[]);
 
     return(
         <div>
             {
-                users.map((el)=> (
-                <p>{el.name} - {el.email}</p>
+                products.map((el)=> (
+                <p>{el.title} - {el.price}</p>
                 ))
             }
         </div>

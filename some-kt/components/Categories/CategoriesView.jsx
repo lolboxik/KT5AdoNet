@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
 
-export default function PostsView(){
-    const [posts, setPosts] = useState([]);
+export default function CategoriesView(){
+    const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        const fetchPosts = async () => {
+        const fetchCategories = async () => {
         try {
-            const response = await fetch('/api/posts');
+            const response = await fetch('/api/categories');
             if (response.ok) {
             const data = await response.json();
-            setPosts(data);
+            setCategories(data);
             } else {
             throw new Error( 'Hе удалось загрузить пользователей' ); 
             }
@@ -23,14 +23,14 @@ export default function PostsView(){
         }
     };
   
-    fetchPosts()
+    fetchCategories()
     },[]);
     
     return(
         <div>
             {
-                posts.map((el)=> (
-                <p>{el.title} - {el.content}</p>
+                categories.map((el)=> (
+                <p>{el.title}</p>
                 ))
             }
         </div>

@@ -3,8 +3,8 @@ const prisma = new PrismaClient();
 
 export async function GET () {
     try {
-        const users = await prisma.user.findMany(); 
-        return new Response(JSON.stringify(users),  { 
+        const products = await prisma.product.findMany(); 
+        return new Response(JSON.stringify(products),  { 
             status: 200, 
         });
      } catch (error) {

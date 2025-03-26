@@ -1,14 +1,16 @@
 'use client'
 
-import UsersView from '../components/Users/UsersView'
-import PostsView from '../components/Posts/PostsView'
+import ProductsView from '../components/Products/ProductsView'
+import CategoriesView from '../components/Categories/CategoriesView'
 
 export default function Home() {
   return (
     <div>
       <h1>Home Page</h1>
-      <UsersView/>
-      <PostsView/>
+      <h2>Products:</h2>
+      <ProductsView/>
+      <h2>Categories:</h2>
+      <CategoriesView/>
     </div>
   );
 }
