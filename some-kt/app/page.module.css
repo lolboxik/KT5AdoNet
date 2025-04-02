@@ -1,0 +1,7 @@
+.padding_small{
+    padding: 2px 0px 2px 100px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}

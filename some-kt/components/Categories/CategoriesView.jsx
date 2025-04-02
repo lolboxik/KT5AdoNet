@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import style from './Categories.module.css'
 
 
 export default function CategoriesView(){
@@ -27,10 +28,10 @@ export default function CategoriesView(){
     },[]);
     
     return(
-        <div>
+        <div className={style.padding_small}>
             {
                 categories.map((el)=> (
-                <p>{el.title}</p>
+                <p className={style.wrapper_small}>{el.title}</p>   
                 ))
             }
         </div>

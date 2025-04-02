@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import style from './Products.module.css'
 
 
 export default function ProductsView(){
@@ -28,10 +29,10 @@ useEffect(() => {
     },[]);
 
     return(
-        <div>
+        <div className={style.padding_small}>
             {
                 products.map((el)=> (
-                <p>{el.title} - {el.price}</p>
+                <p className={style.wrapper_small}>{el.title} - {el.price}</p>
                 ))
             }
         </div>
