@@ -35,7 +35,6 @@ export default function CreatePost() {
       try {
           const payload = {
               ...productData,
-              price: price,
               categoryId: productData.categoryId ? Number(productData.categoryId) : null
             }
             const response = await fetch('/api/products', {
